@@ -107,13 +107,14 @@ static Mixpanel *sharedInstance = nil;
 
     [properties setValue:[NSNumber numberWithBool:[Mixpanel wifiAvailable]] forKey:@"$wifi"];
 
+    /*
     CTTelephonyNetworkInfo *networkInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
     CTCarrier *carrier = [networkInfo subscriberCellularProvider];
 
     if (carrier.carrierName.length) {
         [properties setValue:carrier.carrierName forKey:@"$carrier"];
     }
-
+    */
     return [NSDictionary dictionaryWithDictionary:properties];
 }
 
